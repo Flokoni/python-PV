@@ -1,4 +1,5 @@
-a = 10
-b = 12 
-c = a+b
-print(c)
+print("Hello world")
+a = 2 #this is int data type
+b = 5.5 #this is float
+print (a+b)
+print (f"Here the sum of {a} and {b} = {a+b}")
