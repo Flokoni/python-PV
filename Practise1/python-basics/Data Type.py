@@ -10,6 +10,6 @@ x = 20
 
 x = b"Hello"
 
-x = bytearray(5)
+x = bytearray(5) 
 
 
