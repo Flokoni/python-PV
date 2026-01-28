@@ -3,9 +3,6 @@
 has_login = True
 has_password = True
 
-can_login = has_login and has_password
-print(f"Доступ разрешен: {can_login}") # True
-
 is_weekend = True
 is_holiday = False
 
