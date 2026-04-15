@@ -2,7 +2,6 @@ import pygame, sys
 import random, time
 from pygame.locals import *
 
-# Инициализация
 pygame.init()
 
 # Настройки
@@ -17,14 +16,13 @@ COIN_SCORE = 0
 DISPLAYSURF = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Racer Game")
 
-# Функция для безопасной загрузки картинок
 def load_image(name, fallback_color, size):
     try:
         img = pygame.image.load(name)
         return pygame.transform.scale(img, size)
     except Exception as e:
         print(f"Предупреждение: Не удалось загрузить {name}. Ошибка: {e}")
-        # Если картинка не нашлась, создаем цветной прямоугольник, чтобы игра не вылетала
+    
         surf = pygame.Surface(size)
         surf.fill(fallback_color)
         return surf
@@ -81,7 +79,6 @@ class Player(pygame.sprite.Sprite):
               if pressed_keys[K_RIGHT]:
                   self.rect.move_ip(5, 0)
 
-# Объекты
 P1 = Player()
 E1 = Enemy()
 C1 = Coin()
@@ -103,7 +100,6 @@ while True:
 
     DISPLAYSURF.fill((255, 255, 255))
     
-    # Текст (по заданию - монеты в правом верхнем углу)
     score_txt = font_small.render(f"Enemies: {SCORE}", True, (0,0,0))
     coin_txt = font_small.render(f"Coins: {COIN_SCORE}", True, (0,0,0))
     DISPLAYSURF.blit(score_txt, (10, 10))
@@ -113,12 +109,10 @@ while True:
         DISPLAYSURF.blit(entity.image, entity.rect)
         entity.move()
 
-    # Сбор монет
     if pygame.sprite.spritecollideany(P1, coins):
         COIN_SCORE += 1
         C1.spawn()
 
-    # Столкновение с врагом
     if pygame.sprite.spritecollideany(P1, enemies):
         print("GAME OVER")
         time.sleep(1)

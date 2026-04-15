@@ -18,7 +18,6 @@ else:
     print("ПАПКА IMAGES НЕ НАЙДЕНА!")
 
 try:
-    # 1. Загружаем
     main_clock = pygame.image.load(os.path.join(IMAGES_PATH, "main-clock.png.png")).convert_alpha()
     right_hand_img = pygame.image.load(os.path.join(IMAGES_PATH, "right-hand.png.png")).convert_alpha()
     left_hand_img = pygame.image.load(os.path.join(IMAGES_PATH, "left-hand.png.jpg")).convert_alpha()
