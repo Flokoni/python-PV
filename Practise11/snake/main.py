@@ -4,7 +4,7 @@ import time
 
 pygame.init()
 
-# Цвета
+
 WHITE = (255, 255, 255)
 YELLOW = (255, 255, 102)
 BLACK = (0, 0, 0)

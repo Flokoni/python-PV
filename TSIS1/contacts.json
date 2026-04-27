@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Sasha",
+        "email": null,
+        "birthday": null,
+        "phones": "87014445566"
+    },
+    {
+        "name": "Serikbai",
+        "email": "serikbai@gmail.com",
+        "birthday": "2020-01-01",
+        "phones": "8707777456321"
+    },
+    {
+        "name": "Ivan",
+        "email": null,
+        "birthday": null,
+        "phones": "87771112233"
+    }
+]
